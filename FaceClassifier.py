@@ -81,7 +81,7 @@ for fx in os.listdir(dataset_path):
 		# Create mapping with class_id and names
 		names[class_id] = fx[:-4]
 
-		data_item = np.load(dataset_path+fx)
+		data_item = np.load(dataset_path+fx,allow_pickle=True)
 
 		face_data.append(data_item)
 
